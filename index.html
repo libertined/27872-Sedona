@@ -1,17 +1,122 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Sedona</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
-</head>
-
-<body>
-
-  <p>Репозиторий создан для обучения на продвинутом онлайн-интенсиве «<a href="https://htmlacademy.ru/advanced_intensive">Создание веб-интерфейсов с помощью HTML и CSS</a>».</p>
-
-  <!-- <script src="js/script.js"></script> -->
-
-</body>
+    <head>
+        <title>HTML Academy: Sedona</title>
+        <meta charset="utf-8">
+        <link href="css/normalize.css" rel="stylesheet">
+        <!--<link href="css/style.css" rel="stylesheet">-->
+    </head>
+    <body>
+    <div class="wrapper">
+      <nav class="menu-top">
+        <ul class="menu-top__links">
+          <li class="menu-top__links__item"><a href="">Карта штата</a></li>
+          <li class="menu-top__links__item"><a href="">Информаиця</a></li>
+          <li class="menu-top__links__item"><a href="">Фото и видео</a></li>
+          <li class="menu-top__links__item"><a href="">Гостиницы</a></li>
+        </ul>
+        <div class="menu-top__close"></div>
+      </nav>
+      <header class="header">
+        <div class="header__logo-box">
+          <a class="logo-small" href="/"><img src="img/logo.png" alt="Sedona" class="logo-small__img"></a>
+          <a class="menu-icon" href=""></a>
+        </div>
+        <div class="header__top-picture">
+          <img src="img/logo_top.png" class="header__top-picture__top-text">
+          <p class="header__top-picture__title">Sedona</p>
+          <img src="img/logo_top.png" class="header__top-picture__bottom-text">
+        </div>
+        <div class="header__desc">
+          <p class="header__desc__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="header__desc__reasons">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+        </div>
+      </header>
+      <section class="reason">
+        <div class="reason__text">
+          <div class="promo-text">
+            <h2 class="promo-text__title">Настоящий городок</h2>
+            <p class="promo-text__number">№1</p>
+            <p class="promo-text__desc">Седона не атракцион для туристов, там течет своя жизнь</p>
+          </div>
+        </div>
+        <div class="reason__img"></div>
+      </section>
+      <section class="advice-container">
+        <div class="advice-item">
+          <img src="/" alt="Жилье" class="advice-item__ico">
+          <p class="advice-item__title">Жилье</p>
+          <p class="advice-item__desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </div>
+        <div class="advice-item">
+          <img src="/" alt="Сувениры" class="advice-item__ico">
+          <p class="advice-item__title">Сувениры</p>
+          <p class="advice-item__desc">Не только китайского, но и местного производства!</p>
+        </div>
+        <div class="advice-item">
+          <img src="/" alt="Еда" class="advice-item__ico">
+          <p class="advice-item__title">Еда</p>
+          <p class="advice-item__desc">Всегда заказывай фирменный бургер, Вы не разочаруетесь!</p>
+        </div>
+      </section>
+      <section class="reason reason--devil-bridge">
+        <div class="reason__text">
+          <div class="promo-text">
+            <h2 class="promo-text__title">Там есть мост дьявола</h2>
+            <p class="promo-text__number">№2</p>
+            <p class="promo-text__desc">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </div>
+        </div>
+        <div class="reason__img"></div>
+      </section>
+      <section class="promo-list">
+        <div class="promo-text promo-text--color-gray">
+          <p class="promo-text__title">Небольшая площадь</p>
+          <p class="promo-text__number">№3</p>
+          <p class="promo-text__desc">Все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="promo-text promo-text--color-gray">
+          <p class="promo-text__title">Красивая дорога</p>
+          <p class="promo-text__number">№4</p>
+          <p class="promo-text__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+        <div class="promo-text promo-text--color-gray">
+          <p class="promo-text__title">Мало туристов</p>
+          <p class="promo-text__number">№5</p>
+          <p class="promo-text__desc">Большинство едет в гранд каньон и толпится там</p>
+        </div>
+      </section>
+      <section class="interested">
+        <p class="interested__title">Заинтересовались?</p>
+        <p class="interested__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      </section>
+      <section class="hotel-search">
+        <p class="hotel-search__title">Поиск гостиницы в Седоне</p>
+        <form action="/" class="hotel-search__form">
+          <label for="arrival" class="hotel-search__form__text">Дата заезда:</label>
+          <input type="text" class="hotel-search__form__date" id="arrival" value="24 Апреля 2014">
+          <label for="departure" class="hotel-search__form__text">Дата отъезда:</label>
+          <input type="text" class="hotel-search__form__date" id="departure" value="4 июля 2014">
+          <label for="adult" class="hotel-search__form__text hotel-search__form__text--size_shot">Взрослые:</label>
+          <input type="number" class="hotel-search__form__count" id="adult">
+          <label for="child" class="hotel-search__form__text hotel-search__form__text--size_shot">Дети:</label>
+          <input type="number" class="hotel-search__form__count" id="child">
+          <input type="submit" class="hotel-search__form__submit" value="Найти">
+        </form>
+      </section>
+      <section class="map"></section>
+      <footer class="footer">
+        <div class="copy">#visitSEDONA</div>
+        <div class="social-links">
+          <a class="social-links__vk" href="http://vk.com/"></a>
+          <a class="social-links__fb" href="http://www.facebook.com/"></a>
+          <a class="social-links__yt" href="http://www.youtube.com/"></a>
+        </div>
+        <div class="developers">
+          <div class="developers__by">Website by</div><div class="developers__for">for</div>
+        </div>
+      </footer>
+    </div>
+        <!-- <script src="js/script.js"></script> -->
+    </body>
 </html>
