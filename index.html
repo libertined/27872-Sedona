@@ -9,13 +9,13 @@
     <body>
     <div class="wrapper">
       <nav class="menu-top">
-        <ul class="menu-top__links">
-          <li class="menu-top__links__item"><a href="">Карта штата</a></li>
-          <li class="menu-top__links__item"><a href="">Информаиця</a></li>
-          <li class="menu-top__links__item"><a href="">Фото и видео</a></li>
-          <li class="menu-top__links__item"><a href="">Гостиницы</a></li>
+        <ul class="menu-top__list">
+          <li class="menu-top__item"><a href="">Карта штата</a></li>
+          <li class="menu-top__item"><a href="">Информаиця</a></li>
+          <li class="menu-top__item"><a href="">Фото и видео</a></li>
+          <li class="menu-top__item"><a href="">Гостиницы</a></li>
         </ul>
-        <div class="menu-top__close"></div>
+        <button class="menu-top__close" type="button"></button>
       </nav>
       <header class="header">
         <div class="header__logo-box">
@@ -23,13 +23,13 @@
           <a class="menu-icon" href=""></a>
         </div>
         <div class="header__top-picture">
-          <img src="img/logo_top.png" class="header__top-picture__top-text">
-          <p class="header__top-picture__title">Sedona</p>
-          <img src="img/logo_top.png" class="header__top-picture__bottom-text">
+          <img src="img/logo_top.png" class="header__top-text">
+          <p class="header__title">Sedona</p>
+          <img src="img/logo_top.png" class="header__bottom-text">
         </div>
         <div class="header__desc">
-          <p class="header__desc__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="header__desc__reasons">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+          <p class="header__desc-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="header__desc-reasons">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
         </div>
       </header>
       <section class="reason">
@@ -91,20 +91,20 @@
         <p class="interested__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       </section>
       <section class="hotel-search">
-        <p class="hotel-search__title">Поиск гостиницы в Седоне</p>
-        <form action="/" class="hotel-search__form">
-          <label for="arrival" class="hotel-search__form__text">Дата заезда:</label>
-          <input type="text" class="hotel-search__form__date" id="arrival" value="24 Апреля 2014">
-          <label for="departure" class="hotel-search__form__text">Дата отъезда:</label>
-          <input type="text" class="hotel-search__form__date" id="departure" value="4 июля 2014">
-          <label for="adult" class="hotel-search__form__text hotel-search__form__text--size_shot">Взрослые:</label>
-          <input type="number" class="hotel-search__form__count" id="adult">
-          <label for="child" class="hotel-search__form__text hotel-search__form__text--size_shot">Дети:</label>
-          <input type="number" class="hotel-search__form__count" id="child">
-          <input type="submit" class="hotel-search__form__submit" value="Найти">
+        <form action="/" class="hotel-search__form" name="hotel-search">
+          <p class="hotel-search__form-title">Поиск гостиницы в Седоне</p>
+          <label for="arrival" class="hotel-search__form-text">Дата заезда:</label>
+          <input type="text" class="hotel-search__form-date" id="arrival" value="24 Апреля 2014" name="arrival">
+          <label for="departure" class="hotel-search__form-text">Дата отъезда:</label>
+          <input type="text" class="hotel-search__form-date" id="departure" value="4 июля 2014" name="departure">
+          <label for="adult" class="hotel-search__form-text hotel-search__form-text--size_shot">Взрослые:</label>
+          <input type="number" class="hotel-search__form-count" id="adult" name="adult">
+          <label for="child" class="hotel-search__form-text hotel-search__form-text--size_shot">Дети:</label>
+          <input type="number" class="hotel-search__form-count" id="child" name="child">
+          <button type="submit" class="hotel-search__form-submit" value="Найти" name="send"></button>
         </form>
+        <div class="map"></div>
       </section>
-      <section class="map"></section>
       <footer class="footer">
         <div class="copy">#visitSEDONA</div>
         <div class="social-links">
