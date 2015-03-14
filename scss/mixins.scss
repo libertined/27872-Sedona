@@ -1,0 +1,16 @@
+@mixin reset{
+  margin: 0;
+  padding: 0;
+}
+
+@mixin h1-bold{
+  font-family: $font;
+  font-size: $h-size;
+  font-weight: bold;
+}
+
+@mixin clear{
+  content:'';
+  display:table;
+  clear:both;
+}
