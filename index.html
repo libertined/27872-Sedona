@@ -98,23 +98,30 @@
           <input type="text" class="hotel-search__form-date" id="arrival" value="24 Апреля 2014" name="arrival">
           <label for="departure" class="hotel-search__form-text">Дата отъезда:</label>
           <input type="text" class="hotel-search__form-date" id="departure" value="4 июля 2014" name="departure">
-          <label for="adult" class="hotel-search__form-text hotel-search__form-text--size_shot">Взрослые:</label>
-          <input type="number" class="hotel-search__form-count" id="adult" name="adult">
-          <label for="child" class="hotel-search__form-text hotel-search__form-text--size_shot">Дети:</label>
-          <input type="number" class="hotel-search__form-count" id="child" name="child">
-          <button type="submit" class="btn btn--search" value="Найти" name="send"></button>
+          <div class="hotel-search__shot-wrapper">
+            <label for="adult" class="hotel-search__form-text hotel-search__form-text--size_shot">Взрослые:</label>
+            <label for="child" class="hotel-search__form-text  hotel-search__form-text--size_shot  hotel-search__form-text--right_side">Дети:</label>
+            <span class="hotel-search__down hotel-search__down--first-left">-</span>
+            <input type="text" class="hotel-search__form-count" id="adult" name="adult" value="1">
+            <span class="hotel-search__down">+</span>
+            <span class="hotel-search__down hotel-search__down--right-side hotel-search__down--first-right">+</span>
+            <input type="text" class="hotel-search__form-count hotel-search__form-count--right-side" id="child" name="child" value="0">
+            <span class="hotel-search__down hotel-search__down--right-side">-</span>
+          </div>
+          <button type="submit" class="btn btn--search" value="Найти" name="send">Найти</button>
         </form>
         <div class="map"></div>
       </section>
       <footer class="footer">
         <div class="copy">#visitSEDONA</div>
         <div class="social-links">
-          <a class="social-links__vk" href="http://vk.com/"></a>
+          <a class="social-links__twit" href="http://vk.com/"></a>
           <a class="social-links__fb" href="http://www.facebook.com/"></a>
           <a class="social-links__yt" href="http://www.youtube.com/"></a>
         </div>
         <div class="developers">
-          <div class="developers__by">Website by</div><div class="developers__for">for</div>
+          <span>Website by</span> <a class="developers__by" href="/"><img src="img/ico-dev_by.png"></a>
+          <span>for</span> <a class="developers__for" href="/"><img src="img/ico-dev_for.png"></a>
         </div>
       </footer>
     </div>

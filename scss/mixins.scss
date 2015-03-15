@@ -14,3 +14,18 @@
   display:table;
   clear:both;
 }
+
+@mixin input-text{
+  font-size: $text-size;
+  font-weight: bold;
+  line-height: $input-height;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@mixin btn-text{
+  font-family: $font;
+  font-size: $h-size;
+  font-weight: bold;
+  text-transform: uppercase;
+}

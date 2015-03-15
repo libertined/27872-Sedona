@@ -13,8 +13,9 @@ html, body{
 .wrapper{
   width: $width-mobile;
   margin: 0 auto;
-  border-left: 1px solid #000000;
-  border-right: 1px solid #000000;
+  position: relative;
+  //border-left: 1px solid #000000;
+  //border-right: 1px solid #000000;
 }
 
 @mixin reset{
@@ -271,6 +272,7 @@ html, body{
 .hotel-search{
   &__form{
     @include reset;
+    padding-bottom: 45px;
   }
 
   &__form-title{
@@ -280,4 +282,163 @@ html, body{
     text-align: center;
     padding: 30px $marg-side 30px;
   }
+
+  &__form-text{
+    display: block;
+    padding: 15px ($marg-side+15) 0;
+    @include input-text;
+
+    &--size_shot{
+      float: left;
+      width: (($width-mobile - 3*$marg-side - 2*15px)/2  - 2*15px);
+    }
+
+    &--right_side{
+      float:right;
+    }
+  }
+
+  &__form-date{
+    display: block;
+    position: relative;
+    width: ($width-mobile - (2*$marg-side) - (2*15px) );
+    margin: 0 $marg-side 0;
+    padding: 0 15px 0;
+    @include input-text;
+    background:url("#{$dir}/ico-datepicker.png") $color-input no-repeat;
+    background-position: 96% 50%;
+    border:0;
+    text-transform: uppercase;
+  }
+
+  &__form-count{
+    width: (($width-mobile - 3*$marg-side - 2*15px)/2 - 2*$input-height);
+    float:left;
+    margin: 0;
+    text-align: center;
+    background-color:$color-input;
+    border:0;
+    @include input-text;
+
+    &--right-side{
+      float: right;
+    }
+  }
+
+  &__down{
+    display: block;
+    float: left;
+    width: $input-height;
+    @include input-text;
+    color: $grey-dark;
+    text-align: center;
+    background-color:$color-input;
+    cursor: pointer;
+
+    &--right-side{
+      float: right;
+    }
+
+    &--first-left{
+      margin-left: $marg-side;
+    }
+
+    &--first-right{
+      margin-right: $marg-side;
+    }
+  }
+
+  &__shot-wrapper:after{
+    @include clear;
+  }
+}
+
+.btn--search{
+  @include btn-text;
+  background-color: $bg-colored;
+  color: $white;
+  text-align: center;
+  padding: 20px 0 20px;
+  width: ($width-mobile - 2*$marg-side);
+  margin: 0 auto;
+  margin-top: 45px;
+  clear: both;
+}
+
+.map{
+  width: 100%;
+  height: 593px;
+  background-image: url("#{$dir}/bg-map.jpg");
+  position: relative;
+  overflow: hidden;
+
+  &:after{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    z-index: 5;
+    box-shadow: 0 0 5px 1px;
+  }
+}
+
+.footer{
+  width: 100%;
+  position: absolute;
+  left:0;
+  bottom: 0;
+  padding: $marg-side 0 $marg-side;
+  background-color: rgba(254,254,254,0.9);
+  text-align: center;
+}
+
+.copy{
+  font-size: $size-big;
+  font-weight: bold;
+ }
+
+.social-links{
+  text-align: center;
+  padding: 40px 0 40px;
+  font-size: 0;
+  
+  & a{
+    display: inline-block;
+    width: 46px;
+    height: 48px;
+    background-color: $bg-colored;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    margin: 0 5px 0;
+  }
+
+  &__yt{
+    background-image: url("#{$dir}/ico-youtube.png");
+  }
+  &__twit{
+    background-image: url("#{$dir}/ico-twitter.png");
+  }
+  &__fb{
+    background-image: url("#{$dir}/ico-facebook.png");
+  }
+}
+
+.developers{
+  text-align: center;
+  vertical-align: top;
+
+  & a{
+    display: inline-block;
+    height: 33px;
+    margin:  0 5px 0;
+  }
+  & span{
+    display: inline-block;
+    vertical-align:  top;
+    line-height: 33px;
+  }
+
 }
