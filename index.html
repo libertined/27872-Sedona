@@ -3,6 +3,7 @@
     <head>
         <title>HTML Academy: Sedona</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/normalize.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link href="css/style.css" rel="stylesheet">
@@ -12,7 +13,7 @@
       <nav class="menu-top">
         <ul class="menu-top__list">
           <li class="menu-top__item"><a href="">Карта штата</a></li>
-          <li class="menu-top__item"><a href="">Информаиця</a></li>
+          <li class="menu-top__item"><a href="">Информация</a></li>
           <li class="menu-top__item"><a href="">Фото и видео</a></li>
           <li class="menu-top__item"><a href="">Гостиницы</a></li>
         </ul>
@@ -33,7 +34,7 @@
           <p class="header__desc-reasons">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
         </div>
       </header>
-      <section class="reason reason--with-corner">
+      <section class="reason reason--with-corner clearfix">
         <div class="reason__text">
           <div class="promo-text">
             <h2 class="promo-text__title">Настоящий городок</h2>
@@ -43,7 +44,7 @@
         </div>
         <div class="reason__img"></div>
       </section>
-      <section class="advice-container">
+      <section class="advice-container clearfix">
         <div class="advice-item">
           <img src="img/ico-home.png" alt="Жилье" class="advice-item__ico">
           <p class="advice-item__title">Жилье</p>
@@ -60,7 +61,7 @@
           <p class="advice-item__desc">Всегда заказывай фирменный бургер, Вы не разочаруетесь!</p>
         </div>
       </section>
-      <section class="reason reason--devil-bridge">
+      <section class="reason reason--devil-bridge clearfix">
         <div class="reason__text">
           <div class="promo-text">
             <h2 class="promo-text__title">Там есть мост дьявола</h2>
@@ -70,7 +71,7 @@
         </div>
         <div class="reason__img"></div>
       </section>
-      <section class="promo-list">
+      <section class="promo-list clearfix">
         <div class="promo-text promo-text--color-gray">
           <p class="promo-text__title">Небольшая площадь</p>
           <p class="promo-text__number">№3</p>
@@ -93,20 +94,22 @@
       </section>
       <section class="hotel-search">
         <p class="hotel-search__form-title">Поиск гостиницы в Седоне</p>
-        <form action="/" class="hotel-search__form" name="hotel-search">
+        <form action="/" class="hotel-search__form clearfix" name="hotel-search">
           <label for="arrival" class="hotel-search__form-text">Дата заезда:</label>
           <input type="text" class="hotel-search__form-date" id="arrival" value="24 Апреля 2014" name="arrival">
-          <label for="departure" class="hotel-search__form-text">Дата отъезда:</label>
+          <label for="departure" class="hotel-search__form-text">Дата выезда:</label>
           <input type="text" class="hotel-search__form-date" id="departure" value="4 июля 2014" name="departure">
-          <div class="hotel-search__shot-wrapper">
-            <label for="adult" class="hotel-search__form-text hotel-search__form-text--size_shot">Взрослые:</label>
-            <label for="child" class="hotel-search__form-text  hotel-search__form-text--size_shot  hotel-search__form-text--right_side">Дети:</label>
-            <span class="hotel-search__down hotel-search__down--first-left">-</span>
+          <div class="hotel-search__shot-wrapper clearfix">
+            <label for="adult" class="hotel-search__form-text hotel-search__form-text--shot">Взрослые:</label>
+            <span class="hotel-search__down hotel-search__down--first">-</span>
             <input type="text" class="hotel-search__form-count" id="adult" name="adult" value="1">
             <span class="hotel-search__down">+</span>
-            <span class="hotel-search__down hotel-search__down--right-side hotel-search__down--first-right">+</span>
-            <input type="text" class="hotel-search__form-count hotel-search__form-count--right-side" id="child" name="child" value="0">
-            <span class="hotel-search__down hotel-search__down--right-side">-</span>
+          </div>
+          <div class="hotel-search__shot-wrapper hotel-search__shot-wrapper--right clearfix">
+            <label for="child" class="hotel-search__form-text hotel-search__form-text--shot  hotel-search__form-text--right-side">Дети:</label>
+            <span class="hotel-search__down hotel-search__down--first">-</span>
+            <input type="text" class="hotel-search__form-count" id="child" name="child" value="0">
+            <span class="hotel-search__down">+</span>
           </div>
           <button type="submit" class="btn btn--search" value="Найти" name="send">Найти</button>
         </form>

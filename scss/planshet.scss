@@ -1,0 +1,257 @@
+@media(max-width: $min-planshet){ //Сделать резину для промежуточного мобильного
+  .wrapper{
+    /*width: 100%;
+    min-width: $width-mobile;*/
+    width: $width-mobile;
+  }
+}
+@media(min-width: $min-planshet) {
+  .wrapper{
+    width: 100%;
+    min-width: 570px;
+  }
+  .menu-top{
+    background-color: $white;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+
+    &__list{
+      margin:0;
+    }
+
+    &__item{
+      border: 0;
+      display: inline-block;
+      width: 20%;
+
+      & a{
+        color: $color-main;
+        font-size: $text-size;
+      }
+
+      &:nth-child(2){
+        margin-right: 18%;
+      }
+    }
+
+    &:after{
+      display: none;
+    }
+  }
+
+  .btn--close, .menu-icon{
+    display: none;
+  }
+
+  .header{
+    &__logo-box{
+      width: $logo-small-width;
+      margin: 0 auto;
+    }
+
+    &__top-picture{
+      &:after{
+        height: 36px;
+        background-image: url("#{$dir}/corner-white-big.png");
+        background-position: center bottom;
+      }
+    }
+
+    &__top-text{
+       width: 256px;
+     }
+
+    &__title{
+      margin: 50px 0 50px;
+      & img{
+        width: 458px;
+      }
+    }
+
+    &__bottom-text{
+      width: 295px;
+    }
+
+    &__desc{
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    &__desc-title{
+      font-size: $size-big;
+    }
+  }
+
+  .reason{
+    &--with-corner{
+      background-image: none;
+      padding: 0;
+    }
+
+    &__text{
+      float:left;
+      width: 34%;
+    }
+
+    &__img{
+      width:66%;
+      float: right;
+    }
+
+    &--devil-bridge{
+      & .reason__text{
+        float:right;
+      }
+
+      & .reason__img{
+        float:left;
+      }
+    }
+  }
+
+  .advice-item, .promo-text{
+    float:left;
+    width: 33%;
+    min-width: 170px;
+    text-align: center;
+
+    &__ico{
+      float: none;
+      height: 76px;
+      margin-left: 0;
+    }
+
+    &__title, &__desc{
+      float:none;
+      margin: 0 auto;
+      width: 170px;
+      text-align: center;
+    }
+  }
+
+  .promo-text{
+    padding: 40px 0 40px;
+
+    &__title{
+      width: 130px;
+    }
+  }
+
+  .promo-list{
+    background: $grey;
+
+    & .promo-text:nth-child(n+2):before{
+      display: none;
+    }
+  }
+
+  .interested{
+    &__title{
+      font-size: $h1-big;
+    }
+
+    &__text{
+      width: 430px;
+      margin: 0 auto;
+    }
+  }
+
+  .hotel-search{
+    position: relative;
+
+    &__form-title{
+      width: 570px;
+      margin: 0 auto;
+    }
+    &__form{
+      background: $white;
+      z-index: 10;
+      position: absolute;
+      width: 570px;
+      left:50%;
+      margin-left: -285px;
+      padding: 10px 0 10px;
+    }
+
+    &__form-text{
+      float: left;
+      text-align: left;
+      margin: 15px 0 15px 10%;
+      padding: 0;
+      width: 17%;
+
+      &--shot{
+        width:40%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+
+      &--right-side{
+        margin-left: 20%;
+        margin-right: 4px;
+        width: 20%;
+      }
+    }
+
+    &__form-date{
+      float: right;
+      width: 55%;
+      padding: 0 2.5% 0;
+      margin: 15px 10% 15px 0;
+    }
+
+    &__form-count{
+      width: 17%;
+    }
+
+    &__down{
+      width:15%;
+
+      &--first{
+        margin-left: $marg-side+3;
+      }
+    }
+
+    &__shot-wrapper{
+      margin-top: 15px;
+      margin-left: 10%;
+      width: 40%;
+
+      &--right{
+        margin-left: 0;
+        margin-right: 10%;
+      }
+    }
+  }
+
+  .btn--search{
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+  .copy, .social-links, .developers{
+    float: left;
+    width: 33%;
+    text-align: center;
+  }
+
+  .copy{
+    padding-top: 25px;
+  }
+  .social-links{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .developers{
+    padding-top: 20px;
+  }
+}
+
+@media(min-width: 768px){
+  .wrapper{
+    width: $width-planshet;
+  }
+}

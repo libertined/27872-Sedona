@@ -10,6 +10,7 @@ html, body{
   font-size: $text-size;
   text-transform: uppercase;
 }
+
 .wrapper{
   width: $width-mobile;
   margin: 0 auto;
@@ -17,12 +18,11 @@ html, body{
   //border-left: 1px solid #000000;
   //border-right: 1px solid #000000;
 }
-
-@mixin reset{
-  margin: 0;
-  padding: 0;
+.clearfix:after{
+  content:'';
+  display:table;
+  clear:both;
 }
-
 
 .menu-top{
   width: 100%;
@@ -121,6 +121,7 @@ html, body{
   &__top-picture{
     position: relative;
     background-image: url("#{$dir}/bg-top.jpg");
+    background-position: center;
     text-align: center;
     padding: 45px 0 45px;
 
@@ -135,10 +136,21 @@ html, body{
     }
   }
 
+  &__top-text{
+    width: 196px;
+  }
+
   &__title{
     text-decoration: none;
     display: block;
     margin: 60px 0 60px;
+    & img{
+      width: 280px;
+    }
+  }
+
+  &__bottom-text{
+    width: 197px;
   }
 
   &__desc{
@@ -190,6 +202,8 @@ html, body{
 }
 
 .promo-list{
+  background: $grey;
+
   & .promo-text:nth-child(n+2):before{
     content:'';
     display:block;
@@ -216,7 +230,7 @@ html, body{
   }
 
   &__img{
-    background: url("#{$dir}/reason1.jpg");
+    background: url("#{$dir}/reason1.jpg") center;
     width:320px;
     height: 256px;
   }
@@ -231,7 +245,7 @@ html, body{
 
   &__ico{
     float:left;
-    width:37px;
+    height:38px;
     margin-left: $marg-side;
   }
 
@@ -280,22 +294,16 @@ html, body{
     background-color: $brown;
     color: $white;
     text-align: center;
-    padding: 30px $marg-side 30px;
+    padding: 30px 0 30px;
+    margin: 0;
   }
 
   &__form-text{
     display: block;
+    font-size: $text-size;
+    font-weight: bold;
+    line-height: $input-height;
     padding: 15px ($marg-side+15) 0;
-    @include input-text;
-
-    &--size_shot{
-      float: left;
-      width: (($width-mobile - 3*$marg-side - 2*15px)/2  - 2*15px);
-    }
-
-    &--right_side{
-      float:right;
-    }
   }
 
   &__form-date{
@@ -320,9 +328,6 @@ html, body{
     border:0;
     @include input-text;
 
-    &--right-side{
-      float: right;
-    }
   }
 
   &__down{
@@ -335,21 +340,15 @@ html, body{
     background-color:$color-input;
     cursor: pointer;
 
-    &--right-side{
-      float: right;
-    }
-
-    &--first-left{
+    &--first{
       margin-left: $marg-side;
-    }
-
-    &--first-right{
-      margin-right: $marg-side;
     }
   }
 
-  &__shot-wrapper:after{
-    @include clear;
+  &__shot-wrapper{
+    width: 50%;
+    float: left;
+    padding:0 0 45px;
   }
 }
 
@@ -368,7 +367,7 @@ html, body{
 .map{
   width: 100%;
   height: 593px;
-  background-image: url("#{$dir}/bg-map.jpg");
+  background: url("#{$dir}/bg-map.jpg") center;
   position: relative;
   overflow: hidden;
 
@@ -442,3 +441,5 @@ html, body{
   }
 
 }
+
+@import 'planshet.scss';
