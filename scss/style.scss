@@ -54,6 +54,18 @@ html, body{
       font-weight: bold;
       text-transform: uppercase;
     }
+
+    &:hover{
+      background-color: $color-blue-hv;
+    }
+
+    &:active{
+      background-color: $color-blue-act;
+
+      & a{
+        color: $color-blue-text;
+      }
+    }
   }
 
   &:after{
@@ -313,10 +325,21 @@ html, body{
     margin: 0 $marg-side 0;
     padding: 0 15px 0;
     @include input-text;
-    background:url("#{$dir}/ico-datepicker.png") $color-input no-repeat;
-    background-position: 96% 50%;
-    border:0;
+    background:url("#{$dir}/ico-datepicker-sprite.gif") $color-input no-repeat;
+    background-position: 96% 8px;
+    border:1px solid $color-input;
     text-transform: uppercase;
+
+    &:hover{
+      background-color: $color-input-hv;
+      border-color:$color-input-hv;
+      background-position: 96% -38px;
+    }
+
+    &:focus{
+      background-color: $white;
+      background-position: 96% -82px;
+    }
   }
 
   &__form-count{
@@ -343,6 +366,14 @@ html, body{
     &--first{
       margin-left: $marg-side;
     }
+
+    &:hover{
+      color: $color-main;
+    }
+
+    &:active{
+      color: $color-blue;
+    }
   }
 
   &__shot-wrapper{
@@ -362,6 +393,15 @@ html, body{
   margin: 0 auto;
   margin-top: 45px;
   clear: both;
+
+  &:hover{
+    background-color: $color-blue-hv;
+  }
+
+  &:active{
+    background-color: $color-blue-act;
+    color: $color-blue-text;
+  }
 }
 
 .map{
@@ -412,6 +452,14 @@ html, body{
     background-repeat: no-repeat;
     opacity: 1;
     margin: 0 5px 0;
+
+    &:hover{
+      background-color: $color-blue-hv;
+    }
+
+    &:active{
+      background-color: $color-blue-act;
+    }
   }
 
   &__yt{
@@ -432,7 +480,24 @@ html, body{
   & a{
     display: inline-block;
     height: 33px;
+    width: 26px;
+    background-position: 0 0;
     margin:  0 5px 0;
+
+    &:hover{
+      background-position: 0 -40px;
+    }
+
+    &:active{
+      background-position: 0 0;
+      opacity: 0.3;
+    }
+  }
+  &__by{
+    background-image: url("#{$dir}/ico-dev_by-sprite.png");
+  }
+  &__for{
+    background-image: url("#{$dir}/ico-dev_for-sprite.png");
   }
   & span{
     display: inline-block;

@@ -26,9 +26,37 @@
       display: inline-block;
       width: 20%;
 
+      &:hover, &:active{
+        background-color: $white;
+      }
+
       & a{
         color: $color-main;
         font-size: $text-size;
+
+        &:hover{
+          color: $color-blue;
+        }
+
+        &:active{
+          color: $color-main;
+          opacity: 0.3;
+        }
+      }
+
+      &--active{
+        a{
+          color: $brown;
+
+          &:hover{
+            color: $brown;
+          }
+
+          &:active{
+            color: $brown;
+            opacity: 0.3;
+          }
+        }
       }
 
       &:nth-child(2){

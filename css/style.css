@@ -44,6 +44,12 @@ html, body {
       color: #fff;
       font-weight: bold;
       text-transform: uppercase; }
+    .menu-top__item:hover {
+      background-color: #669ec0; }
+    .menu-top__item:active {
+      background-color: #5496bd; }
+      .menu-top__item:active a {
+        color: #7aadcb; }
   .menu-top:after {
     content: '';
     position: absolute;
@@ -249,10 +255,17 @@ html, body {
   line-height: 38px;
   padding-top: 0;
   padding-bottom: 0;
-  background: url("../img/ico-datepicker.png") #f2f2f2 no-repeat;
-  background-position: 96% 50%;
-  border: 0;
+  background: url("../img/ico-datepicker-sprite.gif") #f2f2f2 no-repeat;
+  background-position: 96% 8px;
+  border: 1px solid #f2f2f2;
   text-transform: uppercase; }
+  .hotel-search__form-date:hover {
+    background-color: #ebebeb;
+    border-color: #ebebeb;
+    background-position: 96% -38px; }
+  .hotel-search__form-date:focus {
+    background-color: #fff;
+    background-position: 96% -82px; }
 .hotel-search__form-count {
   width: 39px;
   float: left;
@@ -280,6 +293,10 @@ html, body {
   cursor: pointer; }
   .hotel-search__down--first {
     margin-left: 20px; }
+  .hotel-search__down:hover {
+    color: #000; }
+  .hotel-search__down:active {
+    color: #81b3d2; }
 .hotel-search__shot-wrapper {
   width: 50%;
   float: left;
@@ -298,6 +315,11 @@ html, body {
   margin: 0 auto;
   margin-top: 45px;
   clear: both; }
+  .btn--search:hover {
+    background-color: #669ec0; }
+  .btn--search:active {
+    background-color: #5496bd;
+    color: #7aadcb; }
 
 .map {
   width: 100%;
@@ -341,6 +363,10 @@ html, body {
     background-repeat: no-repeat;
     opacity: 1;
     margin: 0 5px 0; }
+    .social-links a:hover {
+      background-color: #669ec0; }
+    .social-links a:active {
+      background-color: #5496bd; }
   .social-links__yt {
     background-image: url("../img/ico-youtube.png"); }
   .social-links__twit {
@@ -354,7 +380,18 @@ html, body {
   .developers a {
     display: inline-block;
     height: 33px;
+    width: 26px;
+    background-position: 0 0;
     margin: 0 5px 0; }
+    .developers a:hover {
+      background-position: 0 -40px; }
+    .developers a:active {
+      background-position: 0 0;
+      opacity: 0.3; }
+  .developers__by {
+    background-image: url("../img/ico-dev_by-sprite.png"); }
+  .developers__for {
+    background-image: url("../img/ico-dev_for-sprite.png"); }
   .developers span {
     display: inline-block;
     vertical-align: top;
@@ -382,9 +419,23 @@ html, body {
       border: 0;
       display: inline-block;
       width: 20%; }
+      .menu-top__item:hover, .menu-top__item:active {
+        background-color: #fff; }
       .menu-top__item a {
         color: #000;
         font-size: 14px; }
+        .menu-top__item a:hover {
+          color: #81b3d2; }
+        .menu-top__item a:active {
+          color: #000;
+          opacity: 0.3; }
+      .menu-top__item--active a {
+        color: #766357; }
+        .menu-top__item--active a:hover {
+          color: #766357; }
+        .menu-top__item--active a:active {
+          color: #766357;
+          opacity: 0.3; }
       .menu-top__item:nth-child(2) {
         margin-right: 18%; }
     .menu-top:after {
