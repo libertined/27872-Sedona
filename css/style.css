@@ -175,7 +175,7 @@ html, body {
     background: url("../img/corner-white-bottom.png") #81b3d2 top left no-repeat;
     padding-top: 29px; }
   .reason--devil-bridge .reason__img {
-    background: url("../img/reason2.jpg"); }
+    background-image: url("../img/reason2.jpg"); }
   .reason__img {
     background: url("../img/reason1.jpg") center;
     width: 320px;
@@ -396,10 +396,12 @@ html, body {
   .header__logo-box {
     width: 138px;
     margin: 0 auto; }
-  .header__top-picture:after {
-    height: 36px;
-    background-image: url("../img/corner-white-big.png");
-    background-position: center bottom; }
+  .header__top-picture {
+    background-size: cover; }
+    .header__top-picture:after {
+      height: 36px;
+      background-image: url("../img/corner-white-big.png");
+      background-position: center bottom; }
   .header__top-text {
     width: 256px; }
   .header__title {
@@ -422,29 +424,40 @@ html, body {
     width: 34%; }
   .reason__img {
     width: 66%;
-    float: right; }
+    float: right;
+    background-size: cover; }
   .reason--devil-bridge .reason__text {
     float: right; }
   .reason--devil-bridge .reason__img {
     float: left; }
 
-  .advice-item, .promo-text {
+  .advice-item {
     float: left;
     width: 33%;
     min-width: 170px;
     text-align: center; }
-    .advice-item__ico, .promo-text__ico {
+    .advice-item__ico {
       float: none;
       height: 76px;
       margin-left: 0; }
-    .advice-item__title, .advice-item__desc, .promo-text__title, .promo-text__desc {
+    .advice-item__title, .advice-item__desc {
       float: none;
       margin: 0 auto;
-      width: 170px;
+      width: 70%;
+      min-width: 170px;
       text-align: center; }
 
   .promo-text {
-    padding: 40px 0 40px; }
+    padding: 40px 0 40px;
+    min-width: 170px;
+    text-align: center;
+    float: left; }
+    .promo-text__title, .promo-text__desc {
+      float: none;
+      margin: 0 auto; }
+    .promo-text__desc {
+      width: 70%;
+      min-width: 170px; }
     .promo-text__title {
       width: 130px; }
 
@@ -452,6 +465,8 @@ html, body {
     background: #eee; }
     .promo-list .promo-text:nth-child(n+2):before {
       display: none; }
+    .promo-list .promo-text {
+      width: 33%; }
 
   .interested__title {
     font-size: 30px; }
@@ -526,4 +541,13 @@ html, body {
     padding-top: 20px; } }
 @media (min-width: 768px) {
   .wrapper {
-    width: 768px; } }
+    max-width: 1200px; }
+
+  .header__top-picture {
+    padding: 65px 0 70px; }
+    .header__top-picture:after {
+      height: 57px;
+      background-size: 100% 100%;
+      background-image: url("../img/corner-white-1200.png"); }
+  .header__title {
+    margin: 60px 0 60px; } }

@@ -52,6 +52,8 @@
     }
 
     &__top-picture{
+      background-size: cover;
+
       &:after{
         height: 36px;
         background-image: url("#{$dir}/corner-white-big.png");
@@ -98,6 +100,7 @@
     &__img{
       width:66%;
       float: right;
+      background-size: cover;
     }
 
     &--devil-bridge{
@@ -111,7 +114,7 @@
     }
   }
 
-  .advice-item, .promo-text{
+  .advice-item{
     float:left;
     width: 33%;
     min-width: 170px;
@@ -126,13 +129,27 @@
     &__title, &__desc{
       float:none;
       margin: 0 auto;
-      width: 170px;
+      width: 70%;
+      min-width: 170px;
       text-align: center;
     }
   }
 
   .promo-text{
     padding: 40px 0 40px;
+    min-width: 170px;
+    text-align: center;
+    float: left;
+
+    &__title, &__desc{
+      float:none;
+      margin: 0 auto;
+    }
+
+    &__desc{
+      width: 70%;
+      min-width: 170px;
+    }
 
     &__title{
       width: 130px;
@@ -144,6 +161,10 @@
 
     & .promo-text:nth-child(n+2):before{
       display: none;
+    }
+
+    & .promo-text{
+      width: 33%;
     }
   }
 
@@ -252,6 +273,22 @@
 
 @media(min-width: 768px){
   .wrapper{
-    width: $width-planshet;
+    max-width: 1200px;
+  }
+
+  .header{
+    &__top-picture{
+      padding: 65px 0 70px;
+
+      &:after{
+        height: 57px;
+        background-size: 100% 100%;
+        background-image:  url("#{$dir}/corner-white-1200.png");
+      }
+    }
+
+    &__title{
+      margin: 60px 0 60px;
+    }
   }
 }
