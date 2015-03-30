@@ -88,7 +88,7 @@ html, body{
     position: absolute;
     right: 18px;
     top: 18px;
-    background: url("#{$dir}/ico-cancel.png") center;
+    background: url("#{$dir}/ico-cancel.svg") center;
     width: $ico-width;
     height: $ico-height;
   }
@@ -99,11 +99,17 @@ html, body{
   height: 70px;
   display: block;
   text-decoration: none;
+  background-image: url("#{$dir}/logo-bg.svg");
+  text-align: center;
+
+  &__img{
+    width: 67px;
+  }
 }
 .menu-icon{
   width: $ico-width;
   height: $ico-height;
-  background: url("#{$dir}/ico-menu_mob.png") center;
+  background: url("#{$dir}/ico-menu_mob.svg") center;
 }
 
 .header{
@@ -150,6 +156,15 @@ html, body{
 
   &__top-text{
     width: 196px;
+    margin: 0 auto;
+  }
+
+  &__text-welcome{
+    width: 74%;
+  }
+  &__text-gorgeous{
+    width: 100%;
+    margin-top: 10px;
   }
 
   &__title{
@@ -445,13 +460,18 @@ html, body{
   
   & a{
     display: inline-block;
+    position: relative;
     width: 46px;
     height: 48px;
     background-color: $bg-colored;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    opacity: 1;
     margin: 0 5px 0;
+
+    & svg{
+      fill: $white;
+      position: absolute;
+      top:50%;
+      left:50%;
+    }
 
     &:hover{
       background-color: $color-blue-hv;
@@ -459,17 +479,29 @@ html, body{
 
     &:active{
       background-color: $color-blue-act;
+      & svg{
+        opacity: 0.3;
+      }
     }
   }
 
   &__yt{
-    background-image: url("#{$dir}/ico-youtube.png");
+    & svg{
+      margin-top: -6px;
+      margin-left: -9px;
+    }
   }
   &__twit{
-    background-image: url("#{$dir}/ico-twitter.png");
+    & svg{
+      margin-top: -6px;
+      margin-left: -9px;
+    }
   }
   &__fb{
-    background-image: url("#{$dir}/ico-facebook.png");
+    & svg{
+      margin-top: -9px;
+      margin-left: -5px;
+    }
   }
 }
 
@@ -484,21 +516,27 @@ html, body{
     background-position: 0 0;
     margin:  0 5px 0;
 
+    & svg{
+      fill: $color-main;
+    }
+
     &:hover{
-      background-position: 0 -40px;
+      & svg{
+        fill: $bg-colored;
+      }
     }
 
     &:active{
-      background-position: 0 0;
-      opacity: 0.3;
+      & svg{
+        fill: $color-main;
+        opacity: 0.3;
+      }
     }
   }
   &__by{
-    background-image: url("#{$dir}/ico-dev_by-sprite.png");
+    vertical-align: top;
   }
-  &__for{
-    background-image: url("#{$dir}/ico-dev_for-sprite.png");
-  }
+
   & span{
     display: inline-block;
     vertical-align:  top;

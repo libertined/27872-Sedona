@@ -320,3 +320,21 @@
     }
   }
 }
+
+@media (min-resolution: 1.5dppx) {
+  .header{
+    &__top-picture {
+      background-image: url("#{$dir}/bg-top_x2.jpg");
+    }
+  }
+
+  .reason{
+    &--devil-bridge &__img{
+      background-image: url("#{$dir}/reason2_x2.jpg");
+    }
+
+    &__img{
+      background: url("#{$dir}/reason1_x2.jpg") center;
+    }
+  }
+}

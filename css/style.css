@@ -67,7 +67,7 @@ html, body {
     position: absolute;
     right: 18px;
     top: 18px;
-    background: url("../img/ico-cancel.png") center;
+    background: url("../img/ico-cancel.svg") center;
     width: 23px;
     height: 22px; }
 
@@ -75,12 +75,16 @@ html, body {
   width: 138px;
   height: 70px;
   display: block;
-  text-decoration: none; }
+  text-decoration: none;
+  background-image: url("../img/logo-bg.svg");
+  text-align: center; }
+  .logo-small__img {
+    width: 67px; }
 
 .menu-icon {
   width: 23px;
   height: 22px;
-  background: url("../img/ico-menu_mob.png") center; }
+  background: url("../img/ico-menu_mob.svg") center; }
 
 .header {
   width: 100%; }
@@ -114,7 +118,13 @@ html, body {
       height: 26px;
       background-image: url("../img/corner-white.png"); }
   .header__top-text {
-    width: 196px; }
+    width: 196px;
+    margin: 0 auto; }
+  .header__text-welcome {
+    width: 74%; }
+  .header__text-gorgeous {
+    width: 100%;
+    margin-top: 10px; }
   .header__title {
     text-decoration: none;
     display: block;
@@ -356,23 +366,31 @@ html, body {
   font-size: 0; }
   .social-links a {
     display: inline-block;
+    position: relative;
     width: 46px;
     height: 48px;
     background-color: #81b3d2;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    opacity: 1;
     margin: 0 5px 0; }
+    .social-links a svg {
+      fill: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%; }
     .social-links a:hover {
       background-color: #669ec0; }
     .social-links a:active {
       background-color: #5496bd; }
-  .social-links__yt {
-    background-image: url("../img/ico-youtube.png"); }
-  .social-links__twit {
-    background-image: url("../img/ico-twitter.png"); }
-  .social-links__fb {
-    background-image: url("../img/ico-facebook.png"); }
+      .social-links a:active svg {
+        opacity: 0.3; }
+  .social-links__yt svg {
+    margin-top: -6px;
+    margin-left: -9px; }
+  .social-links__twit svg {
+    margin-top: -6px;
+    margin-left: -9px; }
+  .social-links__fb svg {
+    margin-top: -9px;
+    margin-left: -5px; }
 
 .developers {
   text-align: center;
@@ -383,15 +401,15 @@ html, body {
     width: 26px;
     background-position: 0 0;
     margin: 0 5px 0; }
-    .developers a:hover {
-      background-position: 0 -40px; }
-    .developers a:active {
-      background-position: 0 0;
+    .developers a svg {
+      fill: #000; }
+    .developers a:hover svg {
+      fill: #81b3d2; }
+    .developers a:active svg {
+      fill: #000;
       opacity: 0.3; }
   .developers__by {
-    background-image: url("../img/ico-dev_by-sprite.png"); }
-  .developers__for {
-    background-image: url("../img/ico-dev_for-sprite.png"); }
+    vertical-align: top; }
   .developers span {
     display: inline-block;
     vertical-align: top;
@@ -602,3 +620,11 @@ html, body {
       background-image: url("../img/corner-white-1200.png"); }
   .header__title {
     margin: 60px 0 60px; } }
+@media (min-resolution: 1.5dppx) {
+  .header__top-picture {
+    background-image: url("../img/bg-top_x2.jpg"); }
+
+  .reason--devil-bridge .reason__img {
+    background-image: url("../img/reason2_x2.jpg"); }
+  .reason__img {
+    background: url("../img/reason1_x2.jpg") center; } }
