@@ -11,18 +11,18 @@
     <body>
     <div class="wrapper">
       <nav class="menu-top">
-        <ul class="menu-top__list">
+        <ul class="menu-top__list menu-top__list--close" id="menu-top">
           <li class="menu-top__item menu-top__item--active"><a href="">Карта штата</a></li>
           <li class="menu-top__item"><a href="">Информация</a></li>
           <li class="menu-top__item"><a href="">Фото и видео</a></li>
           <li class="menu-top__item"><a href="">Гостиницы</a></li>
         </ul>
-        <button class="btn btn--close" type="button"></button>
+        <button class="btn btn--close" type="button" id="close-menu"></button>
       </nav>
       <header class="header">
         <div class="header__logo-box">
           <a class="logo-small" href="/"><img src="img/logo-small.png" alt="Sedona" class="logo-small__img"  srcset="img/logo-small_x2.png 2x"></a>
-          <a class="menu-icon" href=""></a>
+          <a class="menu-icon" href="" id="open-menu"></a>
         </div>
         <div class="header__top-picture">
           <div class="header__top-text">
@@ -187,6 +187,6 @@
         </div>
       </footer>
     </div>
-        <!-- <script src="js/script.js"></script> -->
+        <script src="js/script.js"></script>
     </body>
 </html>
